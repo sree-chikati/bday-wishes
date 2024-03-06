@@ -12,12 +12,16 @@ window.addEventListener('load', () => {
     }).then((result) => {
         if (result.isConfirmed) {
             document.querySelector('.song').play();
+            setTimeout(() => {
+                document.querySelector('.song').pause();
+            }, 77000); // 77000 milliseconds = 1 minute 17 seconds
             animationTimeline();
         } else {
             animationTimeline();
         }
     });
 });
+
 
 
 // animation timeline
@@ -63,25 +67,25 @@ const animationTimeline = () => {
         y: 10
     })
     .to(".one",
-        0.7,
+        1.5,
         {
             opacity: 0,
             y: 10
         },
     "+=3.5")
     .to(".two",
-        0.7,
+        1.5,
         {
             opacity: 0,
             y: 10
         },
     "-=1")
-    .from(".three", 0.7, {
+    .from(".three", 0.8, {
         opacity: 0,
         y: 10
     })
     .to(".three",
-        0.7,
+        0.9,
         {
             opacity: 0,
             y: 10
@@ -97,7 +101,7 @@ const animationTimeline = () => {
     })
     .staggerTo(
         ".hbd-chatbox span",
-        1.5, {
+        7.6, {
             visibility: "visible",
         },
         0.05
@@ -105,7 +109,7 @@ const animationTimeline = () => {
     .to(".fake-btn", 0.1, {
         backgroundColor: "rgb(127, 206, 248)",
     },
-    "+=4")
+    "+=5")
     .to(
         ".four",
         0.5, {
@@ -164,7 +168,7 @@ const animationTimeline = () => {
             rotation: 15,
             ease: Expo.easeOut,
         },
-        0.2
+        0.5
     )
     .staggerTo(
         ".idea-6 span",
@@ -246,8 +250,6 @@ const animationTimeline = () => {
             visibility: "visible",
             opacity: 0,
             scale: 80,
-            repeat: 3,
-            repeatDelay: 1.4,
         },
         0.3
     )
