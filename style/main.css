@@ -60,7 +60,7 @@ html {
   }
   
   .text-box .fake-btn {
-    background-color: rgb(21, 161, 237);
+    background-image: linear-gradient(to right, #54a7ff, #5331ff);
     border-radius: 3px;
     bottom: -50px;
     color: #fff;
@@ -150,7 +150,7 @@ html {
   }
   
   .eight svg:nth-child(1) {
-    fill: #bd6ecf;
+    fill: #5f12b1;
     left: 5vw;
     top: 7vh;
   }
