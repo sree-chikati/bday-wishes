@@ -164,7 +164,7 @@ a:hover{
   padding: 3rem;
 }
 
-.photo h1 {
+/* .photo h1 {
   color: #918151;
 }
 
@@ -175,7 +175,7 @@ a:hover{
 .photo button:hover {
   background:#918151!important;
   color: white!important;
-}
+} */
 
 .photo img{
   border-radius: 1rem;
