@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Film Photography</title>
-    <link class = "tab-icon" rel="shortcut icon" href="images/camera-logo.png">
+    <link class = "tab-icon" rel="shortcut icon" href="images/moon.png">
 
      <!-- BOOTSTRAP STYLESHEET LINK-->
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -18,38 +18,82 @@
 
 <body>
     <!--  NAV BAR -->
-    <nav class="navbar bg-light navbar-light navbar-expand-lg">
-		<div class="container">
-			<a href="index.html" class="navbar-brand">
-                <i class="fas fa-camera-retro fa-2x"></i>
-            </a>
-		  
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-		
-			<div class="collapse navbar-collapse" id="navbarResponsive">
-				<ul class="navbar-nav ml-auto">
-					<li class="nav-item"><a href="index.html" class = "nav-link active">Home</a></li>
-                    <li class="nav-item"><a href="index.html#about" class = "nav-link">About</a></li>
-                    <li class="nav-item"><a href="photo.html" class = "nav-link">Photographers</a></li>
+    <!--  HOME NAV BAR -->
+    <nav class="navbar bg-light navbar-dark navbar-expand-lg">
+      <div class="container">
+        <a href="/" class="navbar-brand">
+          <img src="images/moon.png" alt="" width="75", height="75">
+             <div class="overlay">
+                <div class="text">Hello World</div>
+              </div>
+        </a>
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <!-- Home Route -->
+            <li class="nav-item">
+              <button class="openbtn" onclick="openNav()">
+                <img src="images/pics/spotify.png" alt="" width="40", height="40">
+                   <div class="overlay">
+                            <div class="text">Hello World</div>
+                          </div>
+              </button>
 
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="begDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Beginner's Guide
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="begDrop">
-                        <a class="dropdown-item" href="index.html#articles">Articles</a>
-                        <a class="dropdown-item" href="index.html#videos">Videos</a>
-                        </div>
-                    </li>
-
-					<li class="nav-item"><a href="#contact" class = "nav-link">Contact Us</a></li>
-				</ul>
-
-			</div>
-		</div>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
+    <!-- End Navbar -->
+
+    
+    <!-- SIDEBAR -->
+    <div id="mySidebar" class="sidebar">
+      <div class="spotify">
+        <div>
+          <p>Login into your Spotify Account on web browser for optimal listening expereince!</p>
+        </div>
+        <div id="embed-iframe"></div>
+      </div>
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    </div>
+
+
+    <!-- BANNER -->
+    <section class="banner">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h1>Proxcity</h1>
+            <h4 class="py-4">Search for your local service here!</h4>
+    
+          </div>
+        </div>
+      </div>
+      <!--Waves Container-->
+      <div>
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+        <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+        <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+        <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+        </g>
+        </svg>
+        </div>
+      <!--Waves end-->
+    
+    </section>
+    <!-- End Main Content -->
+    
 
     <!-- PHOTOGRAPHERS PINS -->
     <div class="photo" id="photo">
@@ -64,6 +108,9 @@
                   <div class="col-sm-6 col-md-3 item">
                       <div class="thumbnail">
                           <img src="images/pics/birth.jpg" class="img-fluid" alt="Photo1">
+                          <div class="overlay">
+                            <div class="text">Hello World</div>
+                          </div>
                       </div>
                   </div>
   
@@ -71,147 +118,210 @@
                   <div class="col-sm-6 col-md-3 item">
                     <div class="thumbnail">
                         <img src="images/pics/wine.JPG" class="img-fluid" alt="Photo2">
-                    </div>
+                         <div class="overlay">
+                            <div class="text">Hello World</div>
+                          </div>
+                      </div>
                   </div>
   
                   <!-- Photographer 3: Henri Cartier Bresson -->
                   <div class="col-sm-6 col-md-3 item">
                     <div class="thumbnail">
                         <img src="images/pics/frozen.jpeg" class="img-fluid" alt="Photo3">
-                    </div>
+                         <div class="overlay">
+                            <div class="text">Hello World</div>
+                          </div>
+                      </div>
                   </div>
       
                   <!-- Photographer 4: Ansel Adams -->
                   <div class="col-sm-6 col-md-3 item">
                     <div class="thumbnail">
                         <img src="images/pics/pleasanton.png" class="img-fluid" alt="Photo4">
-                    </div>
+                         <div class="overlay">
+                            <div class="text">Hello World</div>
+                          </div>
+                      </div>
                   </div>
       
                   <!-- Photographer 5: Robert Capa -->
                   <div class="col-sm-6 col-md-3 item">
                     <div class="thumbnail">
                         <img src="images/pics/vibe2.jpeg" class="img-fluid" alt="Photo5">
-                    </div>
+                         <div class="overlay">
+                            <div class="text">Hello World</div>
+                          </div>
+                      </div>
                   </div>
   
                   <!-- Photographer 6: Yousuf Karsh -->
                   <div class="col-sm-6 col-md-3 item">
                     <div class="thumbnail">
                         <img src="images/pics/poem4.jpeg" class="img-fluid" alt="Photo6">
-                    </div>
+                         <div class="overlay">
+                            <div class="text">Hello World</div>
+                          </div>
+                      </div>
                   </div>
 
                   <!-- Card 7: -->
                   <div class="col-md-6 col-sm-4 item text-center">
                     <div class="thumbnail">
                         <img src="images/pics/santana.png" class="img-fluid" alt="Photo12">
-                    </div>
+                         <div class="overlay">
+                            <div class="text">Hello World</div>
+                          </div>
+                      </div>
                   </div> 
   
                   <!-- Photographer 9: Dorothea Lange -->
                   <div class="col-sm-6 col-md-3 item text-center">
                     <div class="thumbnail">
                         <img src="images/pics/disney3.jpeg" class="img-fluid" alt="Photo9">
-                    </div>
+                         <div class="overlay">
+                            <div class="text">Hello World</div>
+                          </div>
+                      </div>
                   </div>
   
                   <!-- Photographer 10: Michael Kenna -->
                   <div class="col-sm-6 col-md-3 item text-center">
                     <div class="thumbnail">
                         <img src="images/pics/night.png" class="img-fluid" alt="Photo10">
-                    </div>
+                         <div class="overlay">
+                            <div class="text">Hello World</div>
+                          </div>
+                      </div>
                   </div>
                  
                   <!-- Photographer 11: Vivian Maier -->
                   <div class="col-sm-6 col-md-3 item text-center">
                     <div class="thumbnail">
                         <img src="images/pics/synchro.png" class="img-fluid" alt="Photo11">
-                    </div>
+                         <div class="overlay">
+                            <div class="text">Hello World</div>
+                          </div>
+                      </div>
                   </div>
                  
                   <!-- Photographer 12: Annie Leibovitz -->
                   <div class="col-sm-6 col-md-3 item text-center">
                     <div class="thumbnail">
                         <img src="images/pics/vibe1.jpeg" class="img-fluid" alt="Photo12">
-                    </div>
+                         <div class="overlay">
+                            <div class="text">Hello World</div>
+                          </div>
+                      </div>
                   </div> 
                     
                     <!-- Card 14:  -->
                     <div class="col-sm-6 col-md-3 item text-center">
                       <div class="thumbnail">
                           <img src="images/pics/boston.JPG" class="img-fluid" alt="Photo12">
-                      </div>
+                           <div class="overlay">
+                            <div class="text">Hello World</div>
+                          </div>
+                        </div>
                     </div>     
                     
                     <!-- Card 15:  -->
                     <div class="col-sm-6 col-md-3 item text-center">
                       <div class="thumbnail">
                           <img src="images/pics/disney7.JPG" class="img-fluid" alt="Photo12">
-                      </div>
+                           <div class="overlay">
+                            <div class="text">Hello World</div>
+                          </div>
+                        </div>
                     </div> 
                     
                     <!-- Card 16:  -->
                     <div class="col-sm-6 col-md-3 item text-center">
                       <div class="thumbnail">
                           <img src="images/pics/christmas.png" class="img-fluid" alt="Photo12">
-                      </div>
+                           <div class="overlay">
+                            <div class="text">Hello World</div>
+                          </div>
+                        </div>
                     </div>   
 
                     <!-- Card 13:  -->
                     <div class="col-sm-6 col-md-3 item text-center">
                       <div class="thumbnail">
                           <img src="images/pics/soul.png" class="img-fluid" alt="Photo12">
-                      </div>
+                           <div class="overlay">
+                            <div class="text">Hello World</div>
+                          </div>
+                        </div>
                     </div>   
                     
                     <!-- Card 17:  -->
                     <div class="col-md-6 col-sm-4 item text-center">
                       <div class="thumbnail">
                           <img src="images/pics/photoshoot.jpg" class="img-fluid" alt="Photo12">
-                      </div>
+                           <div class="overlay">
+                            <div class="text">Hello World</div>
+                          </div>
+                        </div>
                     </div>  
                     
                     <!-- Card 18:  -->
                     <div class="col-sm-6 col-md-3 item text-center">
                       <div class="thumbnail">
                           <img src="images/pics/disney4.jpeg" class="img-fluid" alt="Photo12">
-                      </div>
+                           <div class="overlay">
+                            <div class="text">Hello World</div>
+                          </div>
+                        </div>
                     </div>      
                     
                     <!-- Card 19:  -->
                     <div class="col-sm-6 col-md-3 item text-center">
                       <div class="thumbnail">
                           <img src="images/pics/seaport.JPG" class="img-fluid" alt="Photo12">
-                      </div>
+                           <div class="overlay">
+                            <div class="text">Hello World</div>
+                          </div>
+                        </div>
                     </div>   
                     
                     <!-- Card 20:  -->
                     <div class="col-sm-6 col-md-3 item text-center">
                       <div class="thumbnail">
                           <img src="images/pics/cheesecake.png" class="img-fluid" alt="Photo12">
-                      </div>
+                           <div class="overlay">
+                            <div class="text">Hello World</div>
+                          </div>
+                        </div>
                     </div>   
                     
                     <!-- Card 21:  -->
                     <div class="col-sm-6 col-md-3 item text-center">
                       <div class="thumbnail">
                           <img src="images/pics/apartment.JPG" class="img-fluid" alt="Photo12">
-                      </div>
+                           <div class="overlay">
+                            <div class="text">Hello World</div>
+                          </div>
+                        </div>
                     </div> 
                     
                     <!-- Card 22:  -->
                     <div class="col-sm-6 col-md-3 item text-center">
                       <div class="thumbnail">
                           <img src="images/pics/icicles.png" class="img-fluid" alt="Photo12">
-                      </div>
+                           <div class="overlay">
+                            <div class="text">Hello World</div>
+                          </div>
+                        </div>
                     </div>      
                     
                     <!-- Photographer 7: Edward Weston -->
                     <div class="col-sm-6 col-md-3 item">
                       <div class="thumbnail">
                           <img src="images/pics/shadow.jpg" class="img-fluid" alt="Photo7">
-                      </div>
+                           <div class="overlay">
+                            <div class="text">Hello World</div>
+                          </div>
+                        </div>
                     </div>
       
                 
@@ -221,24 +331,30 @@
             </div>
       </div>
 
-    <!--FOOTER-->  
-    <footer>
-        <h3>Film Photography by <span>Sree Chikati</span></h3>
-        <p> Contact:</p>
-        <div id = "find">
-            <a href="https://github.com/sree-chikati" class="github" title="Github">
-                <i class="fa fa-github fa-3x"></i>
-            </a>
-            <a href="https://www.instagram.com/sreechikati/" class="instagram" title="Instagram">
-                <i class="fa fa-instagram fa-3x"></i>
-            </a>
-        </div>
-         
+      <!--FOOTER-->  
+      <footer>
+          <h3>PROXCITY by <span>Lucky 7</span></h3>
+          <p> Source Code:</p>
+          <div id = "find">
+              <a href="" class="github" title="Github">
+                  <i class="fa fa-github fa-3x"></i>
+              </a>
+          
+          </div>
       </footer>
-    
+      <!-- End Footer -->
 
 
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+    AOS.init({
+        disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+        duration: 750,
+        offset: 120,
+        easing: 'ease-in-out'
+    });
+</script>
 <!-- SCRIPT FOR FONT AWESOME -->
 <script src="https://kit.fontawesome.com/2cf12949d8.js" crossorigin="anonymous"></script>
 <!-- jQuery first-->
@@ -247,5 +363,8 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <!--Bootstrap JS-->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="https://open.spotify.com/embed/iframe-api/v1" async></script>
+<script type="application/javascript" src="./script/spotify.js"></script>
+<script type="application/javascript" src="./script/main.js"></script>
 </body>
 </html>
