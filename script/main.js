@@ -33,8 +33,8 @@ const animationTimeline = () => {
         .join("</span><span>")}</span>`;
 
     hbd.innerHTML = `<span>${hbd.innerHTML
-        .split("")
-        .join("</span><span>")}</span>`;
+        .split(" ")
+        .join("</span> <span>")}</span>`;
 
     const ideaTextTrans = {
         opacity: 0,
@@ -78,7 +78,7 @@ const animationTimeline = () => {
             y: 10
         },
     "-=1")
-    .from(".three", 0.8, {
+    .from(".three", 0.5, {
         opacity: 0,
         y: 10
     })
@@ -89,7 +89,7 @@ const animationTimeline = () => {
             y: 10
         },
     "+=3")
-    .from(".four", 0.7, {
+    .from(".four", 0.2, {
         scale: 0.2,
         opacity: 0,
     })
@@ -99,15 +99,15 @@ const animationTimeline = () => {
     })
     .staggerTo(
         ".hbd-chatbox span",
-        7.6, {
+        0.7, {
             visibility: "visible",
         },
         0.05
     )
     .to(".fake-btn", 0.1, {
-        backgroundColor: "rgb(127, 206, 248)",
+        opacity: 0.5,
     },
-    "+=5")
+    "+=1")
     .to(
         ".four",
         0.5, {
@@ -259,7 +259,7 @@ const animationTimeline = () => {
         },
         "+=1"
     );
-
+    
     // Restart Animation on click
     const replyBtn = document.getElementById("replay");
     replyBtn.addEventListener("click", () => {
