@@ -10,6 +10,12 @@ html {
   .song {
     visibility: hidden;
   }
+
+  .btn-primary {
+    background-image: linear-gradient(to right, #54a7ff, #5331ff);
+    color: white;
+    border: transparent;
+  }
   
   .container {
     height: 100vh;
