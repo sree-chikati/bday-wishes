@@ -8,47 +8,6 @@ h1 {
   font-family: 'Poppins', sans-serif;
 }
 
-.btn-primary{
-  box-shadow: none;
-  padding: 8px 25px;
-  border: none;
-  border-radius: 20px;
-  background-image: linear-gradient(to right, #54ffac, #54a7ff);
-  color: black;
-}
-
-.title::before {
-  content: '';
-  background-color: #54ffac;
-  height: 5px;
-  width: 200px;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-  transform: translateY(63px);
-}
-
-.title::after {
-  content: '';
-  background-color: #54ffac;
-  height: 10px;
-  width: 50px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 40px;
-  display: block;
-  transform: translateY(18px);
-}
-
-.modal-content{
-  background-color: #ff847ec7;
-}
-
-.modal-body li{
-  list-style: none;
-  color: white;
-}
-
 /*============= TOP BAR HEADER =============*/
 .top-bar {
   height: 2.8rem;
@@ -152,7 +111,6 @@ background-color: transparent;
 .banner{
   background-image: linear-gradient(to right, #54a7ff, #5331ff);
   color: white;
-  padding-top: 2%;
 }
 
 .banner h1{
@@ -235,46 +193,23 @@ background-color: transparent;
   bottom: 0;
   left: 0;
   right: 0;
-  height: 95%;
   width: 100%;
   opacity: 0;
   transition: .5s ease;
   background-image: linear-gradient(to right, #54a7ff, #5331ff);
   border-radius: 1rem;
   margin: 1rem;
-  padding: 5rem;
+  color: white;
+  font-size: 16px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
 
 .thumbnail:hover .overlay {
   opacity: 1;
-}
-
-.text {
-  color: white;
-  font-size: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.modal-body blockquote {
-  background:#918151;
-  color: white!important;
-  padding: 1rem;
-}
-
-/*-- Photo Info --*/
-.photo-info span{
-  color: #918151;
-}
-
-.photo-info p{
-  color: black;
-  padding: 1rem;
 }
 
 /*============= FOOTER =============*/
@@ -296,22 +231,8 @@ footer h3{
     text-transform: uppercase;
 }
 
-footer p{
-    padding: 0.5rem;
-    text-transform: uppercase;
-}
-
 footer span{
     color:#54ffac;;
-}
-.github{
-  color: white;
-  text-decoration: none;
-  padding: 1rem 1rem 0 1rem;
-}
-
-.github:hover{
-  color: #54ffac;
 }
 
 
