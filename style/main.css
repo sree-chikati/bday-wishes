@@ -156,19 +156,19 @@ html {
   }
   
   .eight svg:nth-child(2) {
-    fill: #7dd175;
+    fill: #75bcd1;
     left: 35vw;
     top: 23vh;
   }
   
   .eight svg:nth-child(3) {
-    fill: #349d8b;
+    fill: #9d3473;
     left: 23vw;
     top: 33vh;
   }
   
   .eight svg:nth-child(4) {
-    fill: #347a9d;
+    fill: #9d55dd;
     left: 57vw;
     top: 43vh;
   }
@@ -192,7 +192,7 @@ html {
   }
   
   .eight svg:nth-child(8) {
-    fill: #8762cb;
+    fill: #62bdcb;
     left: 37vw;
     top: 86vh;
   }
@@ -225,31 +225,7 @@ html {
     z-index: 3;
   }
   
-  /* Media Queries */
-  @media screen and (max-height: 1000px) {
-    .six .hat {
-      left: 40%;
-    }
-  }
-  
-  @media screen and (max-height: 800px) {
-    .six .hat {
-      left: 37%;
-    }
-  }
-  
-  @media screen and (max-height: 700px) {
-    .six .hat {
-      left: 32%;
-    }
-  }
-  
-  @media screen and (max-height: 850px) and (max-width: 450px) {
-    .six .hat {
-      left: 32%;
-    }
-  }
-  
+  /* Media Queries */  
   @media screen and (max-width: 500px) {
     .container {
       width: 90%;
@@ -270,11 +246,6 @@ html {
   
     .idea-6 span {
       font-size: 10rem;
-    }
-  
-    .six .hat {
-      /* top: -20px; */
-      width: 50px;
     }
   
     .wish-hbd {
